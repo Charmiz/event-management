@@ -53,7 +53,7 @@ jobs:
       - name: Azure SQL Deploy
         uses: Azure/sql-action@v2.1
         with:         
-          connection-string: ${{ secrets.defaultConnection }}
+          connection-string: ${{env.defaultConnection}}
           path: /database/sql-script.sql
 
       - name: 'Deploy to Azure Web App'
