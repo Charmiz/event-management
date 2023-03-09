@@ -54,7 +54,7 @@ jobs:
         uses: Azure/sql-action@v2.1
         with:         
           connection-string: 'Database=ems-app-database; Server=ems-app-server.mysql.database.azure.com; User Id=wnpanrdwat; Password=A7R5357CQ7C6017Q$'
-          path: /database/sql-script.sql
+          path: /home/site/wwwroot/database/sql-script.sql
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
