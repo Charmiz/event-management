@@ -1,9 +1,9 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "eventmgmt";
+$servername = "ems-app-server.mysql.database.azure.com";
+$username = "wnpanrdwat";
+$password = "A7R5357CQ7C6017Q$";
+$db = "ems-app-database";
 
 // Create connection
 $con = mysqli_connect($servername, $username, $password,$db);
