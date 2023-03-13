@@ -13,7 +13,7 @@ $db->ssl_set(
     '/etc/mysql/ssl/ca-cert.pem',
     NULL,
     NULL);
-$con = mysqli_real_connect($servername, $username, $password,$database);
+$con = mysqli_real_connect($db,$servername, $username, $password,$database);
 
 // Check connection
 if (!$con) {
