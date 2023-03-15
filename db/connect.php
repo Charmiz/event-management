@@ -20,8 +20,7 @@ require 'vendor/wapacro/az-keyvault-php/src/Secret.php';
  */
 $secret = new AzKeyVault\Secret('https://ems-vault1.vault.azure.net');
 
-$secrets = $secret->getSecrets();
-$value = $secret->getSecret('mySecretName');
+$value = $secret->getSecret('DBHOST');
 
 $servername = $value->secret;
 $username = $_ENV['DB_USERNAME'];
