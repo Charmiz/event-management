@@ -11,6 +11,14 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/..');
 $dotenv->load();
 */
 
+/**
+ * Secrets
+ */
+$secret = new AzKeyVault\Secret('https://ems-vault1.vault.azure.net');
+
+$secrets = $secret->getSecrets();
+print_r($secrets);
+
 $servername = $_ENV['DB_HOST'];
 $username = $_ENV['DB_USERNAME'];
 $password = $_ENV['DB_PASSWORD'];
