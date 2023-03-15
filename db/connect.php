@@ -11,15 +11,19 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/..');
 $dotenv->load();
 */
 
+require 'vendor/autoload.php';
+require 'vendor/wapacro/az-keyvault-php/src/Secret.php';
+
+
 /**
  * Secrets
  */
 $secret = new AzKeyVault\Secret('https://ems-vault1.vault.azure.net');
 
 $secrets = $secret->getSecrets();
-print_r($secrets);
+$value = $secret->getSecret('mySecretName');
 
-$servername = $_ENV['DB_HOST'];
+$servername = $value->secret;
 $username = $_ENV['DB_USERNAME'];
 $password = $_ENV['DB_PASSWORD'];
 $database = $_ENV['DB_DATABASE'];
