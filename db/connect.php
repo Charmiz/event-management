@@ -6,7 +6,7 @@ $password = "A7R5357CQ7C6017Q$";
 $database = "ems-app-database";
 */
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
 
 $servername = $_SERVER['DB_HOST'];
