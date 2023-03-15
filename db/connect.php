@@ -7,8 +7,8 @@ $database = "ems-app-database";
 */
 require 'vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable('/../'.__DIR__);
-print_r('/../'.__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/..');
+print_r(__DIR__.'/..');
 $dotenv->load();
 
 $servername = $_ENV['DB_HOST'];
